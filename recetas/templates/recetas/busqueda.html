@@ -1,0 +1,12 @@
+{% extends 'recetas/base.html' %}
+
+{% block title %}Buscar Recetas{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Buscar Recetas</h1>
+    
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+{% endblock %}

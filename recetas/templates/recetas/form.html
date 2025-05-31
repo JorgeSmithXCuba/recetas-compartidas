@@ -1,0 +1,14 @@
+{% extends 'recetas/base.html' %}
+
+{% block title %}Agregar Receta{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Agregar Nueva Receta</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Guardar Receta</button>
+        <a href="{% url 'listar_recetas' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
